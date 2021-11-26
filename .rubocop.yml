@@ -1,9 +1,8 @@
 AllCops:
   TargetRubyVersion: 3.0.2
-
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
+  NewCops: enable
+  Exclude:
+    - "bin/*"
 
 Style/StringLiteralsInInterpolation:
   Enabled: true
