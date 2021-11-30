@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative '../lib/puzzle'
+
+input = File.read('./input')
+
+puts 'Part 1:'
+puts Puzzle.part1(input)
+
+puts 'Part 2:'
+puts Puzzle.part2(input)
