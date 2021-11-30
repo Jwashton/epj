@@ -2,6 +2,13 @@
 
 Generate new projects for each Advent of Code puzzle.
 
+## Usage
+
+```
+epj new [-y year] [-d day] [-t template]
+epj new -s [-l template] lib_name
+```
+
 ## Installation
 
 Add this line to your application's Gemfile:
