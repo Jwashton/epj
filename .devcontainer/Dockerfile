@@ -26,7 +26,9 @@ RUN addgroup ${GROUP_ID:+-g ${GROUP_ID}} developer \
 
 USER developer
 
-RUN mkdir /home/developer/app
+RUN mkdir /home/developer/app \
+  && mkdir /home/developer/advent_of_code \
+  && mkdir -p /home/developer/.config/epj/templates
 
 WORKDIR /home/developer/app
 
