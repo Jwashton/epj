@@ -6,10 +6,10 @@ RSpec.describe Epj do
   end
 
   it 'knows the AoC directory' do
-    expect(Epj::HOME).to eq(Pathname.new('/home/developer/advent_of_code'))
+    expect(Epj.home).to eq(Pathname.new('./tmp/aruba/advent_of_code').expand_path)
   end
 
   it 'can build the path for a sub directory' do
-    expect(Epj::HOME / '2021').to eq(Pathname.new('/home/developer/advent_of_code/2021'))
+    expect(Epj.home / '2021').to eq(Pathname.new('./tmp/aruba/advent_of_code/2021').expand_path)
   end
 end

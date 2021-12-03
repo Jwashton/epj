@@ -6,7 +6,7 @@ Generate new projects for each Advent of Code puzzle.
 
 ```
 epj new [-y year] [-d day] [-t template]
-epj new -s [-l template] lib_name
+epj new -s [-t template] lib_name
 ```
 
 ## Installation

@@ -3,5 +3,11 @@
 require 'pathname'
 
 module Epj
-  HOME = Pathname.new('/home/developer/advent_of_code')
+  def self.home
+    @@home ||= Pathname.new('~/advent_of_code').expand_path
+  end
+
+  def self.home=(new_home)
+    @@home = Pathname.new(new_home)
+  end
 end

@@ -10,19 +10,19 @@ module Epj
     desc 'new [--year year]', 'Initialize a new day'
     option :year, type: :numeric, default: Time.now.year, aliases: [:y]
     option :day, type: :numeric, default: Time.now.day, aliases: [:d]
-    option :template, type: :string, default: 'ruby'
+    option :template, type: :string, default: 'ruby', aliases: [:t]
     def new
       year = options[:year].to_s
       day = options[:day].to_s.rjust(2, '0')
 
       puts 'Starting day!'
       puts "+ New #{year}"
-      FileUtils.mkdir(Epj::HOME / year)
+      FileUtils.mkdir(Epj.home / year)
       puts "+ New #{day}"
-      FileUtils.mkdir(Epj::HOME / year / day)
+      FileUtils.mkdir(Epj.home / year / day)
 
       puts "+ New #{options[:template]}"
-      FileUtils.mkdir(Epj::HOME / year / day / options[:template])
+      FileUtils.mkdir(Epj.home / year / day / options[:template])
     end
 
     def self.exit_on_failure?
